@@ -181,15 +181,6 @@ Powerful tmux configuration with vim keybindings:
 - **Plugins**: TPM, tmux-sensible, tmux-yank, vim-tmux-navigator
 - **No confirmations**: Kill panes/windows without prompts
 
-## Version Control
-
-This repository is tracked with git. To push to a remote:
-
-```bash
-git remote add origin <your-repo-url>
-git push -u origin main
-```
-
 ## Tmux Plugin Installation
 
 TPM (Tmux Plugin Manager) is automatically installed when you run `./scripts/install-all.sh` or `./scripts/install/tmux.sh`.
@@ -202,14 +193,6 @@ tmux
 
 # Install plugins by pressing: Ctrl+Space + I (capital i)
 ```
-
-**Tmux keybindings:**
-- `Ctrl+Space` - Prefix key
-- `Prefix + I` - Install plugins
-- `Prefix + U` - Update plugins
-- `Prefix + |` or `%` - Split vertically
-- `Prefix + -` or `"` - Split horizontally
-- `Ctrl+h/j/k/l` - Navigate panes (vim-style)
 
 ## Omarchy-Specific Notes
 
