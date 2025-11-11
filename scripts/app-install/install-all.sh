@@ -20,6 +20,7 @@ echo "Omarchy Dotfiles - System Installation"
 echo -e "======================================${NC}"
 echo ""
 echo "This will install all required programs:"
+echo "  - GNU Stow (dotfiles symlink manager)"
 echo "  - Ghostty (terminal emulator)"
 echo "  - Tmux (terminal multiplexer + TPM)"
 echo ""
@@ -56,7 +57,8 @@ run_install() {
     fi
 }
 
-# Run all installation scripts
+# Run all installation scripts (stow must be first!)
+run_install "stow.sh"
 run_install "ghostty.sh"
 run_install "tmux.sh"
 

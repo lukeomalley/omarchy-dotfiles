@@ -32,16 +32,11 @@ omarchy-dotfiles/
 
 ### Prerequisites
 
-**Install stow** (symlink manager):
-```bash
-yay -S stow
-```
-
 > **Note:** These dotfiles are designed for Omarchy, which comes with `yay` pre-installed.
 
 ### Quick Setup
 
-**1. Install Programs** - Installs Ghostty (from AUR) and Tmux + TPM:
+**1. Install Programs** - Installs GNU Stow, Ghostty, and Tmux + TPM:
 ```bash
 ./scripts/app-install/install-all.sh
 ```
@@ -59,12 +54,14 @@ The `install-all.sh` script automatically installs:
 
 | Program | Source | Description |
 |---------|--------|-------------|
+| **GNU Stow** | Official repos (via yay) | Symlink manager for dotfiles |
 | **Ghostty** | AUR (via yay) | Fast, feature-rich terminal emulator |
 | **Tmux** | Official repos (via yay) | Terminal multiplexer for managing multiple sessions |
 | **TPM** | GitHub | Tmux Plugin Manager (auto-cloned to `~/.tmux/plugins/tpm`) |
 
 **Individual Installation:**
 ```bash
+./scripts/app-install/stow.sh       # Install just Stow
 ./scripts/app-install/ghostty.sh    # Install just Ghostty
 ./scripts/app-install/tmux.sh       # Install just Tmux + TPM
 ```
@@ -83,6 +80,7 @@ All helper scripts are located in the `scripts/` directory:
 
 ### Program Installation
 - **`./scripts/app-install/install-all.sh`** - Install all programs at once
+- **`./scripts/app-install/stow.sh`** - Install GNU Stow
 - **`./scripts/app-install/ghostty.sh`** - Install Ghostty terminal
 - **`./scripts/app-install/tmux.sh`** - Install Tmux + TPM
 
