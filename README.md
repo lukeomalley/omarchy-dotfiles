@@ -122,7 +122,15 @@ Ghostty terminal emulator configuration with:
 - 90% opacity with blur effect
 - Zsh shell integration
 - Inconsolata Nerd Font Mono
+- Font size: 5pt (compact display)
 - Optimized for ergonomics and aesthetics
+
+### starship
+Minimal starship prompt configuration:
+- Shows only current directory (no prompt character)
+- Cyan colored directory with smart truncation
+- Git branch and status commented out (easy to re-enable)
+- Clean and distraction-free prompt
 
 ## Version Control
 

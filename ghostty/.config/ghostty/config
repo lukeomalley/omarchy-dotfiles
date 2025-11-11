@@ -4,7 +4,7 @@ clipboard-read = allow
 clipboard-write = allow
 window-colorspace = display-p3
 window-theme = dark
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 background = #08080d
 foreground = #ebdbb2
 selection-background = #665c54
@@ -26,7 +26,7 @@ palette = 12=#83a598
 palette = 13=#d3869b
 palette = 14=#8ec07c
 palette = 15=#ebdbb2
-font-size = 5
+font-size = 8
 font-family = Inconsolata Nerd Font Mono
 macos-titlebar-style = hidden
 
@@ -36,7 +36,7 @@ background-blur = true
 
 # Window padding (single value = even on all sides; use "top,bottom" for different values)
 window-padding-x = 8
-window-padding-y = 8
+window-padding-y = 0
 
 # Protect against malicious clipboard operations
 clipboard-paste-protection = true
@@ -51,7 +51,7 @@ mouse-scroll-multiplier = 3
 
 # Modern cursor style with blinking
 cursor-style = block
-cursor-style-blink = true
+cursor-style-blink = false
 
 # Enable shell integration for better terminal features
 shell-integration = zsh

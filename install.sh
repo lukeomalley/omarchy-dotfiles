@@ -95,21 +95,26 @@ if ! command -v stow &> /dev/null; then
     exit 1
 fi
 
-# Install ghostty
-if [ -d "ghostty" ]; then
-    install_package "ghostty"
-else
-    echo -e "${RED}Error: ghostty package not found${NC}"
-    exit 1
-fi
+# List of packages to install
+PACKAGES=("ghostty" "starship")
+
+# Install all packages
+for package in "${PACKAGES[@]}"; do
+    if [ -d "$package" ]; then
+        install_package "$package"
+    else
+        echo -e "${YELLOW}Warning: $package package not found, skipping...${NC}"
+    fi
+done
 
 echo -e "${GREEN}======================================"
 echo "Installation Complete! 🎉"
 echo -e "======================================${NC}"
 echo ""
 echo "Next steps:"
-echo "  1. Restart ghostty to see your changes"
-echo "  2. Your old configs are backed up in ~/.dotfiles-backup/"
-echo "  3. Any changes to the dotfiles will now be reflected immediately!"
+echo "  1. Restart ghostty to see your terminal changes"
+echo "  2. Open a new shell or run 'source ~/.bashrc' to see starship changes"
+echo "  3. Your old configs are backed up in ~/.dotfiles-backup/"
+echo "  4. Any changes to the dotfiles will now be reflected immediately!"
 echo ""
 
