@@ -39,7 +39,7 @@ sudo pacman -S stow
 
 For first-time setup, just run:
 ```bash
-./install.sh
+./scripts/install.sh
 ```
 
 This will:
@@ -50,12 +50,12 @@ This will:
 
 ## Helper Scripts
 
-This repository includes helper scripts to make management easier:
+All helper scripts are located in the `scripts/` directory:
 
-- **`./status.sh`** - Shows all packages and whether they're currently stowed
-- **`./add-config.sh`** - Automates adding a new configuration to the repo
+- **`./scripts/status.sh`** - Shows all packages and whether they're currently stowed
+- **`./scripts/add-config.sh`** - Automates adding a new configuration to the repo
   ```bash
-  ./add-config.sh hypr ~/.config/hypr/hyprland.conf
+  ./scripts/add-config.sh hypr ~/.config/hypr/hyprland.conf
   ```
 
 ## Usage
