@@ -20,20 +20,19 @@ if command -v ghostty &> /dev/null; then
     exit 0
 fi
 
-# Install ghostty from AUR
-echo -e "${YELLOW}→${NC} Installing ghostty from AUR..."
-if command -v yay &> /dev/null; then
-    yay -S --noconfirm ghostty
-elif command -v paru &> /dev/null; then
-    paru -S --noconfirm ghostty
-else
-    echo -e "${RED}Error: No AUR helper found. Please install yay or paru first.${NC}"
-    echo "To install yay:"
+# Check if yay is installed
+if ! command -v yay &> /dev/null; then
+    echo -e "${RED}Error: yay is not installed${NC}"
+    echo "Please install yay first:"
     echo "  git clone https://aur.archlinux.org/yay.git"
     echo "  cd yay"
     echo "  makepkg -si"
     exit 1
 fi
+
+# Install ghostty from AUR via yay
+echo -e "${YELLOW}→${NC} Installing ghostty from AUR..."
+yay -S --noconfirm ghostty
 
 # Verify installation
 if command -v ghostty &> /dev/null; then

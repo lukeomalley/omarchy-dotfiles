@@ -31,8 +31,17 @@ omarchy-dotfiles/
 ## Installation
 
 ### Prerequisites
+
+**1. Install yay** (AUR helper - needed for both official and AUR packages):
 ```bash
-sudo pacman -S stow
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+**2. Install stow** (symlink manager):
+```bash
+yay -S stow
 ```
 
 ### Quick Setup
@@ -55,8 +64,8 @@ The `install-all.sh` script automatically installs:
 
 | Program | Source | Description |
 |---------|--------|-------------|
-| **Ghostty** | AUR (via yay/paru) | Fast, feature-rich terminal emulator |
-| **Tmux** | pacman | Terminal multiplexer for managing multiple sessions |
+| **Ghostty** | AUR (via yay) | Fast, feature-rich terminal emulator |
+| **Tmux** | Official repos (via yay) | Terminal multiplexer for managing multiple sessions |
 | **TPM** | GitHub | Tmux Plugin Manager (auto-cloned to `~/.tmux/plugins/tpm`) |
 
 **Individual Installation:**
