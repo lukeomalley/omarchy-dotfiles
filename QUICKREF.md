@@ -1,5 +1,12 @@
 # Quick Reference Card
 
+## First Time Setup
+
+```bash
+# Install all dotfiles (backs up existing configs automatically)
+./install.sh
+```
+
 ## Daily Commands
 
 ```bash

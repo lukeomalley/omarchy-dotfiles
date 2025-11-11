@@ -35,6 +35,19 @@ Install GNU Stow:
 sudo pacman -S stow
 ```
 
+## Quick Install
+
+For first-time setup, just run:
+```bash
+./install.sh
+```
+
+This will:
+- Backup your existing configs to `~/.dotfiles-backup/`
+- Remove old configs
+- Create symlinks with stow
+- Handle everything automatically!
+
 ## Helper Scripts
 
 This repository includes helper scripts to make management easier:
