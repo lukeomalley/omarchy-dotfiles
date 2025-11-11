@@ -1,0 +1,30 @@
+# Editor temporary files
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# Sensitive data (if you accidentally add any)
+*secret*
+*password*
+*.key
+*.pem
+
+# Cache directories
+__pycache__/
+*.pyc
+.cache/
+
+# Local machine-specific configs (optional)
+# Uncomment if you have machine-specific overrides
+# *.local
+
