@@ -152,35 +152,6 @@ stow -R ghostty
    git commit -m "Add appname configuration"
    ```
 
-## Current Packages
-
-### ghostty
-Ghostty terminal emulator configuration with:
-- Gruvbox Dark Hard theme with custom background
-- 90% opacity with blur effect
-- Zsh shell integration
-- Inconsolata Nerd Font Mono
-- Font size: 5pt (compact display)
-- Optimized for ergonomics and aesthetics
-
-### starship
-Minimal starship prompt configuration:
-- Shows only current directory (no prompt character)
-- Cyan colored directory with smart truncation
-- Git branch and status with minimal icons
-- Clean and distraction-free prompt with "on" connector
-
-### tmux
-Powerful tmux configuration with vim keybindings:
-- **Prefix key**: `Ctrl+Space` (instead of default Ctrl+b)
-- **Mouse support**: Enabled for easy scrolling and pane resizing
-- **Vi mode**: Vi-style copy mode keybindings
-- **Smart pane navigation**: `Ctrl+h/j/k/l` to move between panes
-- **Current directory**: New panes/windows open in current path
-- **Gruvbox theme**: Dark theme matching ghostty
-- **Plugins**: TPM, tmux-sensible, tmux-yank, vim-tmux-navigator
-- **No confirmations**: Kill panes/windows without prompts
-
 ## Tmux Plugin Installation
 
 TPM (Tmux Plugin Manager) is automatically installed when you run `./scripts/install-all.sh` or `./scripts/install/tmux.sh`.
