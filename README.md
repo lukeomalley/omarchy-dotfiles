@@ -20,6 +20,10 @@ omarchy-support/
 │   └── .config/
 │       └── ghostty/
 │           └── config
+├── omarchy-overrides/  # Hyprland configuration overrides
+│   └── .config/
+│       └── omarchy-overrides/
+│           └── omarchy-overrides.conf
 ├── starship/         # Starship prompt configuration
 │   └── .config/
 │       └── starship.toml
@@ -164,6 +168,23 @@ tmux
 
 # Install plugins by pressing: Ctrl+Space + I (capital i)
 ```
+
+## Omarchy Overrides
+
+Custom Hyprland configuration overrides that extend or modify Omarchy's default settings without touching the base configuration in `~/.local/share/omarchy`.
+
+**Current overrides:**
+- Removes window borders (`border_size = 0`)
+
+**Usage:**
+1. Stow the package: `stow omarchy-overrides`
+2. Add to your Hyprland config (`~/.config/hypr/hyprland.conf`):
+   ```ini
+   source = ~/.config/omarchy-overrides/omarchy-overrides.conf
+   ```
+3. Reload Hyprland: `Super + Shift + R` or restart Hyprland
+
+This approach keeps your customizations separate and version-controlled while respecting Omarchy's architecture.
 
 ## Omarchy-Specific Notes
 
