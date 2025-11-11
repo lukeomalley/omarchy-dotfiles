@@ -5,7 +5,7 @@
 After installing stow, run these commands to activate your ghostty configuration:
 
 ```bash
-cd ~/omarchy-dotfiles
+cd ~/omarchy-support
 
 # Backup your existing config (just in case)
 cp ~/.config/ghostty/config ~/.config/ghostty/config.backup
@@ -29,12 +29,12 @@ ls -la ~/.config/ghostty/config
 
 You should see output like:
 ```
-lrwxrwxrwx 1 luke luke 52 Nov 11 18:45 /home/luke/.config/ghostty/config -> ../../../omarchy-dotfiles/ghostty/.config/ghostty/config
+lrwxrwxrwx 1 luke luke 52 Nov 11 18:45 /home/luke/.config/ghostty/config -> ../../../omarchy-support/ghostty/.config/ghostty/config
 ```
 
 ## What Just Happened?
 
-Stow created a symbolic link from `~/.config/ghostty/config` pointing to your dotfiles repository at `~/omarchy-dotfiles/ghostty/.config/ghostty/config`.
+Stow created a symbolic link from `~/.config/ghostty/config` pointing to your dotfiles repository at `~/omarchy-support/ghostty/.config/ghostty/config`.
 
 Now when you edit the file in either location, you're editing the same file. Your actual config lives in your version-controlled dotfiles repo!
 
@@ -42,7 +42,7 @@ Now when you edit the file in either location, you're editing the same file. You
 
 1. **Initialize git repository** (if not already done):
    ```bash
-   cd ~/omarchy-dotfiles
+   cd ~/omarchy-support
    git init
    git add .
    git commit -m "Initial commit: Add ghostty configuration"
@@ -56,7 +56,7 @@ Now when you edit the file in either location, you're editing the same file. You
 
 3. **Push to GitHub** (optional but recommended):
    ```bash
-   git remote add origin https://github.com/yourusername/omarchy-dotfiles.git
+   git remote add origin https://github.com/yourusername/omarchy-support.git
    git branch -M main
    git push -u origin main
    ```

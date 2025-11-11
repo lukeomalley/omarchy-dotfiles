@@ -32,7 +32,7 @@ for dir in */; do
         if [ -L "$target_path" ]; then
             # Check if it points to our dotfiles repo
             link_target=$(readlink "$target_path")
-            if [[ "$link_target" == *"omarchy-dotfiles/$dir"* ]] || [[ "$link_target" == *"$dir"* ]]; then
+            if [[ "$link_target" == *"omarchy-support/$dir"* ]] || [[ "$link_target" == *"$dir"* ]]; then
                 is_stowed=true
                 break
             fi

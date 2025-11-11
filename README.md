@@ -14,7 +14,7 @@ Following Omarchy's recommendations:
 Each directory represents a "package" that can be independently managed with stow:
 
 ```
-omarchy-dotfiles/
+omarchy-support/
 ├── ghostty/          # Ghostty terminal configuration
 │   └── .config/
 │       └── ghostty/

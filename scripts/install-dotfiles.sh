@@ -45,7 +45,7 @@ install_package() {
         elif [ -L "$target" ]; then
             # Check if it already points to our dotfiles
             link_target=$(readlink "$target")
-            if [[ "$link_target" == *"omarchy-dotfiles/$package"* ]]; then
+            if [[ "$link_target" == *"omarchy-support/$package"* ]]; then
                 echo -e "   ${GREEN}✓${NC} Already stowed: $(basename $target)"
             else
                 needs_backup=true
