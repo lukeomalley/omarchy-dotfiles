@@ -1,17 +1,18 @@
-# Omarchy Dotfiles
+# Omarchy Support
 
-This repository contains my personal dotfiles for Omarchy, managed with [GNU Stow](https://www.gnu.org/software/stow/).
+This repository contains my personal dotfiles and supporting shell scripts for configuring and setting up an Omarchy system to my liking. Dotfiles are managed with [GNU Stow](https://www.gnu.org/software/stow/), and the included scripts automate program installation, configuration management, and system setup.
 
 ## Philosophy
 
 Following Omarchy's recommendations:
 - All user configurations live in `~/.config` (never modify `~/.local/share/omarchy`)
 - Use stow to symlink configs from this repo to their proper locations
+- Automate setup with shell scripts for reproducibility
 - Version control everything to maintain consistency across systems
 
 ## Structure
 
-Each directory represents a "package" that can be independently managed with stow:
+The repository contains both dotfile packages and helper scripts:
 
 ```
 omarchy-support/
@@ -19,20 +20,31 @@ omarchy-support/
 │   └── .config/
 │       └── ghostty/
 │           └── config
-├── hypr/             # Hyprland window manager configs
+├── starship/         # Starship prompt configuration
 │   └── .config/
-│       └── hypr/
-├── waybar/           # Status bar configuration
+│       └── starship.toml
+├── tmux/             # Tmux configuration
 │   └── .config/
-│       └── waybar/
-└── ...
+│       └── tmux/
+│           └── tmux.conf
+└── scripts/          # Helper scripts for automation
+    ├── install-dotfiles.sh    # Stow all dotfiles
+    ├── status.sh              # Show stow status
+    ├── add-config.sh          # Add new configs
+    └── app-install/           # Program installation scripts
+        ├── install-all.sh
+        ├── stow.sh
+        ├── ghostty.sh
+        └── tmux.sh
 ```
+
+Each top-level directory (except `scripts/`) represents a "package" that can be independently managed with stow.
 
 ## Installation
 
 ### Prerequisites
 
-> **Note:** These dotfiles are designed for Omarchy, which comes with `yay` pre-installed.
+> **Note:** This setup is designed for Omarchy, which comes with `yay` pre-installed.
 
 ### Quick Setup
 
@@ -91,7 +103,7 @@ All helper scripts are located in the `scripts/` directory:
 From this directory, use stow to create symlinks:
 
 ```bash
-cd ~/omarchy-dotfiles
+cd ~/omarchy-support
 
 # Install a specific package
 stow ghostty
@@ -108,7 +120,7 @@ stow */
 To remove symlinks (won't delete the actual files):
 
 ```bash
-cd ~/omarchy-dotfiles
+cd ~/omarchy-support
 
 # Uninstall a package
 stow -D ghostty

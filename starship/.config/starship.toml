@@ -5,7 +5,7 @@ add_newline = false
 command_timeout = 200
 
 # Format: "directory on branch" (only shows "on" in git repos)
-format = "$directory$git_branch$git_status"
+format = "$directory$git_branch$git_status$character"
 
 [directory]
 truncation_length = 3
@@ -34,3 +34,7 @@ staged = "+"
 renamed = "»"
 deleted = "✘"
 
+# Prompt character - changes color based on last command status
+[character]
+success_symbol = "[󰥓](bold green)"
+error_symbol = "[󰥓](bold red)"

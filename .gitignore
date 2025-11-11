@@ -28,3 +28,6 @@ __pycache__/
 # Uncomment if you have machine-specific overrides
 # *.local
 
+# Tmux plugins (managed by TPM)
+tmux/.config/tmux/plugins/
+
